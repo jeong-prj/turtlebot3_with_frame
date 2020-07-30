@@ -1,0 +1,11 @@
+//to move dynamixel
+
+roscore
+// only dynamixel
+rosrun rosserial_python serial_node.py _port:=/dev/ttyACM0 _baud:=57600
+//with tire
+roslaunch turtlebot3_bringup turtlebot3_core.launch
+
+rosrun teleop_frame trigger_pub
+
+roslaunch turtlebot3_teleop turtlebot3_teleop_key.launch
