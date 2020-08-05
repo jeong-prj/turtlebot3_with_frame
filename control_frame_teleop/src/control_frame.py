@@ -8,7 +8,9 @@ class Control:
     def __init__(self):
         rospy.init_node("control", anonymous=True)
         self.servo_pub = rospy.Publisher('/servo', UInt16, queue_size=10)
+	self.home_pub = rospy.Publisher('/home', UInt16, queue_size=10)
         self.serv = UInt16()
+	self.home = UInt16()
         self.mode = "Ready to Raise up" #before raise up
         
 
@@ -29,6 +31,7 @@ class Control:
                 self.PickDown()
                 print(self.mode)
                 self.servo_pub.publish(self.serv)
+		self.home_pub.publish(self.home)
                 self.mode = "Ready to Raise up"
                     
     def starting_trigger(self):
