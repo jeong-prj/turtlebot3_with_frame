@@ -36,13 +36,9 @@ include_directories(
   ${catkin_INCLUDE_DIRS}
 )
 
-add_executable(servo_pub /home/eoj/catkin_ws/src/teleop_frame/src/servo_pub.cpp)
-target_link_libraries(servo_pub ${catkin_LIBRARIES})
-add_dependencies(servo_pub ${mode_second}_EXPORTED_TARGETS ${catkin_EXPORTED_TARGETS})
-
-add_executable(signal_pub /home/eoj/catkin_ws/src/teleop_frame/src/signal_pub.cpp)
-target_link_libraries(signal_pub ${catkin_LIBRARIES})
-add_dependencies(signal_pub ${mode_second}_EXPORTED_TARGETS ${catkin_EXPORTED_TARGETS})
+add_executable(trigger_pub_with_various_angle /home/eoj/catkin_ws/src/teleop_frame/src/trigger_pub_with_various_angle.cpp)
+target_link_libraries(trigger_pub_with_various_angle ${catkin_LIBRARIES})
+add_dependencies(trigger_pub_with_various_angle ${mode_second}_EXPORTED_TARGETS ${catkin_EXPORTED_TARGETS})
 
 
 add_executable(trigger_pub /home/eoj/catkin_ws/src/teleop_frame/src/trigger_pub.cpp)
