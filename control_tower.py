@@ -77,14 +77,14 @@ class Control:
                 if self.mani_mode == "Pick up large box": 
                     self.mani_mode = "Ready to Release large box"
                     self.call_frame_pub.publish(1)#call frame_robot to large box
-                    self.frame_move_pub.publish(1) #frame up
+                    self.frame_move_pub.publish(1) #frame up - send 1
                 elif self.mani_mode == "Release large box":
                     self.mani_mode = "Ready to Pick up box"
                     self.return_frame_pub.publish(1)
                     self.mode = 0
             
             elif self.home == 1: #frame_robot reach to home
-                self.frame_move_pub.publish(2) #frame down
+                self.frame_move_pub.publish(2) #frame down - send 2
             ###메니 동작 완료
 
             # else: #모든 상태가 0일 때 mani_move동작:
