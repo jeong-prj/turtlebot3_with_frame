@@ -14,7 +14,7 @@ We need those cpp files in teleop_frame
  
  <br><br>
  New!!<br>
- I update pkg "control_frame_teleop"<br>
+ update pkg "control_frame_teleop"<br>
  
 <ul>
   <li>
